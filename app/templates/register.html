@@ -1,0 +1,865 @@
+
+
+<style>
+
+    /* =========================
+       REGISTER PAGE
+    ========================= */
+
+    .register-page {
+        background: #f5f3ef;
+        min-height: 90vh;
+        padding: 60px 15px;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+ 
+    .register-header h1 {
+        font-size: 46px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .register-header p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+
+    /* =========================
+       REGISTER CARD
+    ========================= */
+
+    .register-card {
+        max-width: 850px;
+        margin: auto;
+
+        background: #ffffff;
+
+        padding: 45px;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* =========================
+       HOTEL BRAND
+    ========================= */
+
+    .hotel-brand {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .hotel-brand-icon {
+        width: 65px;
+        height: 65px;
+
+        margin: auto;
+
+        border-radius: 50%;
+
+        background: #212529;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 28px;
+    }
+
+    .hotel-brand h2 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+
+        font-size: 25px;
+        font-weight: 700;
+
+        color: #222;
+    }
+
+    .hotel-brand p {
+        margin: 0;
+
+        color: #a17c42;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    .register-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .register-title h3 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    .register-title p {
+        color: #777;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .register-form label {
+        display: block;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        color: #333;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* Input */
+
+    .register-input {
+        width: 100%;
+
+        height: 50px;
+
+        padding: 12px 15px;
+
+        border: 1px solid #ddd;
+
+        border-radius: 6px;
+
+        outline: none;
+
+        font-size: 14px;
+
+        transition: 0.3s;
+    }
+
+    .register-input:focus {
+        border-color: #a17c42;
+
+        box-shadow:
+            0 0 0 3px rgba(161, 124, 66, 0.12);
+    }
+
+
+    /* Input Group */
+
+    .register-input-group {
+        position: relative;
+        margin-bottom: 22px;
+    }
+
+    .register-input-icon {
+        position: absolute;
+
+        right: 15px;
+
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        color: #a17c42;
+
+        font-size: 17px;
+    }
+
+
+    /* =========================
+       PASSWORD
+    ========================= */
+
+    .password-wrapper {
+        position: relative;
+    }
+
+    .password-wrapper .register-input {
+        padding-right: 45px;
+    }
+
+    .password-toggle {
+        position: absolute;
+
+        right: 15px;
+
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        cursor: pointer;
+
+        color: #a17c42;
+    }
+
+
+    /* =========================
+       TERMS
+    ========================= */
+
+    .terms {
+        margin: 5px 0 25px;
+
+        font-size: 13px;
+
+        color: #666;
+    }
+
+    .terms input {
+        margin-right: 7px;
+    }
+
+    .terms a {
+        color: #a17c42;
+
+        text-decoration: none;
+
+        font-weight: 600;
+    }
+
+    .terms a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       REGISTER BUTTON
+    ========================= */
+
+    .register-submit {
+        width: 100%;
+
+        height: 52px;
+
+        border: none;
+
+        border-radius: 6px;
+
+        background: #212529;
+
+        color: white;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        letter-spacing: 1px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    .register-submit:hover {
+        background: #a17c42;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+
+    /* =========================
+       DIVIDER
+    ========================= */
+
+    .register-divider {
+        display: flex;
+
+        align-items: center;
+
+        margin: 30px 0;
+
+        color: #aaa;
+
+        font-size: 12px;
+    }
+
+    .register-divider::before,
+    .register-divider::after {
+        content: "";
+
+        flex: 1;
+
+        height: 1px;
+
+        background: #ddd;
+    }
+
+    .register-divider span {
+        padding: 0 15px;
+    }
+
+
+    /* =========================
+       LOGIN LINK
+    ========================= */
+
+    .login-link {
+        text-align: center;
+
+        color: #777;
+
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #a17c42;
+
+        text-decoration: none;
+
+        font-weight: 600;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       SECURITY MESSAGE
+    ========================= */
+
+    .security-message {
+        margin-top: 25px;
+
+        padding: 13px;
+
+        background: #f7f7f7;
+
+        border-radius: 6px;
+
+        text-align: center;
+
+        color: #777;
+
+        font-size: 12px;
+    }
+
+    .security-message i {
+        color: #198754;
+
+        margin-right: 5px;
+    }
+
+
+    /* =========================
+       BACK HOME
+    ========================= */
+
+    .back-home {
+        display: block;
+
+        text-align: center;
+
+        margin-top: 22px;
+
+        color: #777;
+
+        text-decoration: none;
+
+        font-size: 14px;
+    }
+
+    .back-home:hover {
+        color: #a17c42;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 576px) {
+
+        .register-header {
+            padding: 60px 15px;
+        }
+
+        .register-header h1 {
+            font-size: 34px;
+        }
+
+        .register-header p {
+            font-size: 15px;
+        }
+
+        .register-page {
+            padding: 35px 15px;
+        }
+
+        .register-card {
+            padding: 30px 22px;
+        }
+
+        .hotel-brand h2 {
+            font-size: 22px;
+        }
+
+    }
+
+</style>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+
+<!-- =========================
+     REGISTER SECTION
+========================= -->
+
+<section class="register-page">
+
+    <div class="container">
+
+        <div class="register-card">
+
+
+            <!-- HOTEL BRAND -->
+
+            <div class="hotel-brand">
+
+                <div class="hotel-brand-icon">
+
+                    <i class="bi bi-building"></i>
+
+                </div>
+
+                <h2>
+                    Grand Palace Hotel
+                </h2>
+
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="register-title">
+
+                <h3>
+                    Create Your Guest Account
+                </h3>
+
+            </div>
+
+
+            <!-- DJANGO MESSAGES -->
+
+            {% if messages %}
+
+                {% for message in messages %}
+
+                    <div style="background: #ffdddd; color: red; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                        
+                    
+
+                        {{ message }}
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                        ></button>
+
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+
+            {% if form.errors %}
+                <div style="background: #ffdddd; color: red; padding: 10px;" >
+                  {{form.errors}}
+            
+                </div>
+            {% endif %}
+
+            <!-- =========================
+                 REGISTER FORM
+            ========================== -->
+
+            <form
+                method="POST"
+                action="{% url 'register' %}"
+                class="register-form"
+            >
+
+                {% csrf_token %}
+
+
+                <!-- NAME -->
+
+                <div class="row">
+
+                    <!-- FIRST NAME -->
+
+                    <div class="col-md-6">
+
+                        <div class="register-input-group">
+
+                            <label for="first_name">
+                                First Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="first_name"
+                                name="first_name"
+                                class="register-input"
+                                placeholder="Enter your first name"
+                                required
+                            >
+
+                            <i
+                                class="bi bi-person register-input-icon"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LAST NAME -->
+
+                    <div class="col-md-6">
+
+                        <div class="register-input-group">
+
+                            <label for="last_name">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="last_name"
+                                name="last_name"
+                                class="register-input"
+                                placeholder="Enter your last name"
+                                required
+                            >
+
+                            <i
+                                class="bi bi-person register-input-icon"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- USERNAME -->
+
+                <div class="register-input-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="register-input"
+                        placeholder="Choose a username"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <i
+                        class="bi bi-person-badge register-input-icon"
+                    ></i>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="register-input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="register-input"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <i
+                        class="bi bi-envelope register-input-icon"
+                    ></i>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="register-input-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="register-input"
+                        placeholder="Enter your phone number"
+                    >
+
+                    <i
+                        class="bi bi-telephone register-input-icon"
+                    ></i>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="register-input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="register-input"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <span
+                            class="password-toggle"
+                            onclick="togglePassword('password', 'passwordIcon')"
+                        >
+
+                            <i
+                                class="bi bi-eye"
+                                id="passwordIcon"
+                            ></i>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="register-input-group">
+
+                    <label for="confirm_password">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            name="confirm_password"
+                            class="register-input"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <span
+                            class="password-toggle"
+                            onclick="togglePassword(
+                                'confirm_password',
+                                'confirmPasswordIcon'
+                            )"
+                        >
+
+                            <i
+                                class="bi bi-eye"
+                                id="confirmPasswordIcon"
+                            ></i>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+
+                    <label for="terms">
+
+                        I agree to the
+
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+
+                        and
+
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+
+                    </label>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="register-submit"
+                >
+
+                    <i class="bi bi-person-plus"></i>
+
+                    &nbsp; CREATE ACCOUNT
+
+                </button>
+
+            </form>
+
+
+            <!-- DIVIDER -->
+
+            <div class="register-divider">
+
+                <span>
+                    ALREADY A GUEST?
+                </span>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <div class="login-link">
+
+                Already have an account?
+
+                <a href="{% url 'login_view' %}">
+                    Login Here
+                </a>
+
+            </div>
+
+
+            <!-- SECURITY -->
+
+            <div class="security-message">
+
+                <i class="bi bi-shield-check"></i>
+
+                Your personal information is securely protected.
+
+            </div>
+
+
+            <!-- BACK HOME -->
+
+            <a
+                href="{% url 'home' %}"
+                class="back-home"
+            >
+
+                <i class="bi bi-arrow-left"></i>
+
+                Back to Hotel Website
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PASSWORD SCRIPT
+========================= -->
+
+<script>
+
+function togglePassword(inputId, iconId) {
+
+    const password =
+        document.getElementById(inputId);
+
+    const icon =
+        document.getElementById(iconId);
+
+
+    if (password.type === "password") {
+
+        password.type = "text";
+
+        icon.classList.remove("bi-eye");
+
+        icon.classList.add("bi-eye-slash");
+
+    } else {
+
+        password.type = "password";
+
+        icon.classList.remove("bi-eye-slash");
+
+        icon.classList.add("bi-eye");
+
+    }
+
+}
+
+</script>

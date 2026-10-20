@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+            <div style="background: #039319; color: rgba(4, 133, 11, 0.87); padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+            
+        
+
+                    {{ message }}
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                    ></button>
+
+            </div>
+
+        {% endfor %}
+
+        {% endif %}
+
+        {% if form.errors %}
+            <div style="background: #ffdddd; color: red; padding: 10px;" >
+                {{form.errors}}
+
+            </div>
+        {% endif %}
+
+
+
+
+
+        <br><br><br><br>
+        <form method="POST" action="{% url 'book_appointment' %}" class="booking-form">
+
+            {% csrf_token %}
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label class="form-label">Full Name</label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="full_name"
+                        placeholder="Your full name"
+                        required
+                    >
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Phone Number</label>
+
+                    <input
+                        class="form-control"
+                        type="tel"
+                        name="phone"
+                        placeholder="233241234567"
+                        required
+                    >
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Email Address</label>
+
+                    <input
+                        class="form-control"
+                        type="email"
+                        name="email"
+                        placeholder="you@example.com"
+                    >
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Service</label>
+
+                    <select
+                        class="form-select"
+                        name="service"
+                        required
+                    >
+                        <option value="">Choose a service</option>
+
+                        <option value="Box Braids">Box Braids</option>
+                        <option value="Knotless Braids">Knotless Braids</option>
+                        <option value="Cornrows">Cornrows</option>
+                        <option value="Ghana Braids">Ghana Braids</option>
+                        <option value="Natural Hair">Natural Hair</option>
+                        <option value="Locs">Locs</option>
+                        <option value="Wig Installation">Wig Installation</option>
+                        <option value="Bridal Hairstyles">Bridal Hairstyles</option>
+                        <option value="Kids Hairstyles">Kids Hairstyles</option>
+                        <option value="Hair Treatment">Hair Treatment</option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Appointment Date</label>
+
+                    <input
+                        class="form-control"
+                        type="date"
+                        name="appointment_date"
+                        required
+                    >
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Appointment Time</label>
+
+                    <input
+                        class="form-control"
+                        type="time"
+                        name="appointment_time"
+                        required
+                    >
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Message</label>
+
+                    <textarea
+                        class="form-control"
+                        name="message"
+                        rows="3"
+                        placeholder="Tell us about the hairstyle you want..."
+                    ></textarea>
+                </div>
+
+                <div class="col-12">
+
+                    <button
+                        class="btn btn-gold btn-lg rounded-pill w-100"
+                        type="submit"
+                    >
+                        <i class="bi bi-calendar2-check me-2"></i>
+                        Confirm Booking Request
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+{% endblock %}        

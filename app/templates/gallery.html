@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container py-5 mt-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold" style="letter-spacing:4px;">GALLERY</h1>
+    <div style="width:60px; height:3px; background:#d4af37; margin:10px auto;"></div>
+    <p class="text-muted">More Styles from SCILLAS BRAIDES</p>
+  </div>
+
+  <div class="row g-3">
+    <!-- JUST DUPLICATE THIS BLOCK FOR EACH PICTURE -->
+    
+    <div class="col-6 col-md-4">
+      <img src="{% static 'images/hair9.jpeg' %}" class="w-100 rounded-4 gallery-img" style="height:320px; object-fit:cover; cursor:pointer;">
+    </div>
+
+    <div class="col-6 col-md-4">
+      <img src="{% static 'images/hair1.jpg' %}" class="w-100 rounded-4 gallery-img" style="height:320px; object-fit:cover; cursor:pointer;">
+    </div>
+
+    <div class="col-6 col-md-4">
+      <img src="{% static 'images/same11.jpeg' %}" class="w-100 rounded-4 gallery-img" style="height:320px; object-fit:cover; cursor:pointer;">
+    </div>
+
+    <div class="col-6 col-md-4">
+      <img src="{% static 'images/buterfly locs.jpeg' %}" class="w-100 rounded-4 gallery-img" style="height:320px; object-fit:cover; cursor:pointer;">
+    </div>
+
+    <div class="col-6 col-md-4">
+      <img src="{% static 'images/hair3.jpeg' %}" class="w-100 rounded-4 gallery-img" style="height:320px; object-fit:cover; cursor:pointer;">
+    </div>
+
+    <div class="col-6 col-md-4">
+      <img src="{% static 'images/hair7.jpeg' %}" class="w-100 rounded-4 gallery-img" style="height:320px; object-fit:cover; cursor:pointer;">
+    </div>
+
+    <!-- Add more by copying the div above, just change 1.jpg to 7.jpg, 8.jpg etc -->
+
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{% url 'book_appointment' %}#booking" class="btn btn-dark rounded-pill px-5 py-3">Book Your Style Now</a>
+  </div>
+</div>
+
+<!-- Click to enlarge -->
+<div class="modal fade" id="imgModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImg" src="" class="w-100 rounded-4">
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.gallery-img').forEach(img => {
+  img.addEventListener('click', function(){
+    document.getElementById('modalImg').src = this.src;
+    new bootstrap.Modal(document.getElementById('imgModal')).show();
+  });
+});
+</script>
+
+<style>
+.gallery-img:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+</style>
+
+{% endblock %}

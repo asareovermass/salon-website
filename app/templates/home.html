@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    
+
+        <!-- HERO -->
+        <header id="home" class="hero-section">
+          <div class="hero-overlay"></div>
+          <div class="container position-relative z-2">
+            <div class="row align-items-center min-vh-100">
+              <div class="col-lg-7 pt-5">
+                <p class="eyebrow">Celebrate Your Beauty</p>
+                <h1>Beauty That<br><span>Tells Your Story</span></h1>
+                <p class="hero-copy">
+                  Premium African hairstyles crafted with elegance, creativity and culture.
+                  We bring out the best in you.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="{% url 'book_appointment'%}" class="btn btn-gold btn-lg rounded-pill px-4">
+                    <i class="bi bi-calendar2-check me-2"></i>Book Your Appointment
+                  </a>
+                  <a href="#gallery" class="btn btn-outline-gold btn-lg rounded-pill px-4">
+                    Explore Our Styles <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+                </div>
+                <div class="hero-stats">
+                  <div><strong>8+</strong><span>Years Experience</span></div>
+                  <div><strong>5K+</strong><span>Happy Clients</span></div>
+                  <div><strong>30+</strong><span>Signature Styles</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="scroll-down" href="#services"><i class="bi bi-chevron-down"></i></a>
+        </header>
+
+        <!-- SERVICES -->
+        <section id="services" class="section section-cream">
+          <div class="container">
+            <div class="section-heading text-center">
+              <p class="eyebrow">Our Services</p>
+              <h2>Popular Hairstyle Services</h2>
+              <p>Beautiful styles, carefully created to match your personality and lifestyle.</p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/box b.jpeg'%}" alt="Braided hairstyle"></div>
+                  <div class="service-body"><h5>Box Braids</h5><p>From GHS 300</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/notless.jpeg'%}" alt="Knotless braids"></div>
+                  <div class="service-body"><h5>Knotless Braids</h5><p>From GHS 350</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{%static 'images/hair2.jpeg'%}" alt="Cornrows hairstyle"></div>
+                  <div class="service-body"><h5>Cornrows</h5><p>From GHS 250</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/buterfly locs.jpeg'%}" alt="Soft Locs"></div>
+                  <div class="service-body"><h5>Soft Locs</h5><p>From GHS 300</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/hair3.jpeg'%}" alt="Boho braids"></div>
+                  <div class="service-body"><h5>Boho Braids</h5><p>From GHS 250</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/locs.jpeg'%}" alt="Locs hairstyle"></div>
+                  <div class="service-body"><h5>Locs</h5><p>From GHS 300</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/hair9.jpeg'%}" alt="Senegalese Twists"></div>
+                  <div class="service-body"><h5>Senegales Twists</h5><p>From GHS 400</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/hair1.jpg'%}" alt="Bridal hairstyle"></div>
+                  <div class="service-body"><h5>Bridal Hairstyles</h5><p>From GHS 450</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/hair7.jpeg'%}" alt="Butterfly Locs"></div>
+                  <div class="service-body"><h5>Butterfly Locs</h5><p>From GHS 150</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl">
+                <div class="service-card">
+                  <div class="service-image"><img src="{% static 'images/hair t2.jpeg'%}" alt="Hair treatment"></div>
+                  <div class="service-body"><h5>Hair Treatment</h5><p>From GHS 200</p><a href="{% url 'book_appointment'%}">Book Now</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about-section">
+          <div class="container">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-6">
+                <div class="about-image-wrap">
+                  <img src="{% static 'images/scilla 2.jpeg'%}" alt="Kora stylist working on a client">
+                  <div class="experience-badge"><strong>8+</strong><span>Years of<br>Excellence</span></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <p class="eyebrow">About Us</p>
+                <h2>Welcome to <span>Scilla Braids</span></h2>
+                <p class="lead">Where African beauty meets modern luxury.</p>
+                <p>
+                  At Scilla Braids, we believe every woman is uniquely beautiful.
+                  Our mission is to provide top-quality hair services in a relaxed and welcoming
+                  environment. We specialize in modern and traditional African hairstyles using
+                  premium products and skilled hands.
+                </p>
+                <div class="feature-list">
+                  <div><i class="bi bi-award"></i><span><b>Professional</b><small>Expert stylists</small></span></div>
+                  <div><i class="bi bi-box-seam"></i><span><b>Premium Products</b><small>Quality you can trust</small></span></div>
+                  <div><i class="bi bi-shield-check"></i><span><b>Clean & Safe</b><small>Comfortable environment</small></span></div>
+                  <div><i class="bi bi-heart"></i><span><b>Your Satisfaction</b><small>Our priority</small></span></div>
+                </div>
+                <a href="{% url 'book_appointment'%}" class="btn btn-gold rounded-pill px-4 mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="section gallery-section">
+          <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+              <div>
+                <p class="eyebrow">Our Gallery</p>
+                <h2 class="text-white mb-0">Our Latest Styles</h2>
+              </div>
+              <a href="{% url 'gallery' %}" class="btn btn-outline-gold rounded-pill">See More Pictures <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+
+            <div class="gallery-grid">
+              <div class="gallery-item tall"><img src="{%  static 'images/hair14.jpeg'%}" alt="Braids"><div class="gallery-label">Ghana Braids</div></div>
+              <div class="gallery-item"><img src="{% static 'images/hair15.jpeg'%}" alt="Cornrows"><div class="gallery-label">Cornrows</div></div>
+              <div class="gallery-item"><img src="{% static 'images/hair13.jpeg'%}" alt="Locs"><div class="gallery-label">Locs</div></div>
+              <div class="gallery-item"><img src="{% static 'images/hair8.jpeg'%}" alt="Wig styling"><div class="gallery-label">Silk Press</div></div>
+              <div class="gallery-item tall"><img src="{% static 'images/hair5.jpeg'%}" alt="Bridal hair"><div class="gallery-label">Bridal Glam</div></div>
+              <div class="gallery-item"><img src="{% static 'images/hair12.jpeg'%}" alt="Natural hair"><div class="gallery-label">Natural Hair</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STYLISTS -->
+        <section id="stylists" class="section section-cream">
+          <div class="container">
+            <div class="section-heading text-center">
+              <p class="eyebrow">Our Stylists</p>
+              <h2>Meet Our Professional Stylists</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+              
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="stylist-card"><img src="{% static 'images/scilla.jpeg'%}" alt="Pricilla"><h5>Pricilla</h5><p>Hair Specialist</p></div>
+              </div>
+          
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section testimonials-section">
+          <div class="container">
+            <div class="section-heading text-center text-white">
+              <p class="eyebrow">Testimonials</p>
+              <h2>What Our Clients Say</h2>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>“Kora Hair & Beauty is simply amazing! The service is top-notch and the staff are so friendly. I love my new braids!”</p>
+                    <strong>— Nana Ama, Accra</strong>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>“Professional, clean and very creative. They always know how to bring out the best in me.”</p>
+                    <strong>— Efua, Kumasi</strong>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>“The best hair salon in Ghana! I always leave feeling confident and beautiful.”</p>
+                    <strong>— Akosua, Tema</strong>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><i class="bi bi-chevron-left"></i></button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOOKING -->
+        <section id="booking" class="section booking-section">
+          <div class="container">
+            <div class="booking-box">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                  <p class="eyebrow">Book Your Style</p>
+                  <h2>Ready for a<br>new look?</h2>
+                  <p>Book an appointment today and let us create the perfect style for you.</p>
+                  <div class="contact-mini">
+                    <div><i class="bi bi-telephone"></i><span>+233 54 153 8591</span></div>
+                    <div><i class="bi bi-whatsapp"></i><span>WhatsApp Us</span></div>
+                    <div><i class="bi bi-geo-alt"></i><span>Accra, Ghana</span></div>
+                    <div><i class="bi bi-clock"></i><span>Mon–Sat: 9:00 AM–7:00 PM</span></div>
+                  </div>
+                </div>
+        </section>    
+                
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-5">
+                <p class="eyebrow">Contact Us</p>
+                <h2>Let's create<br>your next look.</h2>
+                <p class="text-muted">Have a question or want to discuss a custom hairstyle? Reach out to us.</p>
+                <div class="contact-details">
+                  <a href="tel:+233541538591"><i class="bi bi-telephone"></i><span>+233541538591</span></a>
+                  <a href="mailto:scilla@gmail.com"><i class="bi bi-envelope"></i><span>hello@korahairbeauty.com</span></a>
+                  <div><i class="bi bi-geo-alt"></i><span>Accra, Ghana</span></div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="map-placeholder">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <h4>Lakeside comminuty 6 transformer</h4>
+                  <p>Accra, Ghana</p>
+                  <a class="btn btn-dark rounded-pill px-4" href="https://www.google.com/maps/search/Accra ,+Ghana" target="_blank" rel="noopener">Open in Maps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+
+{% endblock %}

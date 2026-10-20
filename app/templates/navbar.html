@@ -1,0 +1,78 @@
+{% load static %}
+
+<style>
+.brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.brand-logo {
+  width: 45px !important;
+  height: 45px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  border: 2px solid #d4af37 !important;
+}
+.brand span strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.brand span small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: violet;
+  line-height: 1;
+}
+</style>
+
+
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top kora-navbar">
+      <div class="container">
+        <a class="navbar-brand brand" href="{% url 'home'%}">
+          <img src="{% static 'images/logo.jpeg' %}" alt="logo" class="brand-logo">
+          <span>
+            <strong>SCILLAS BRAIDS</strong>
+            <small>HAIR & BEAUTY</small>
+          </span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home'%}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown">Hairstyles</a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#services">Braids</a></li>
+                <li><a class="dropdown-item" href="#services">Natural Hair</a></li>
+                <li><a class="dropdown-item" href="#services">Wig Styling</a></li>
+                <li><a class="dropdown-item" href="#services">Bridal Styles</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="{% url 'gallery' %}">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stylists">Stylists</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+  {% if user.is_authenticated %}
+          <a class="btn btn-gold rounded-pill px-2" href="{% url 'logout_view'%}">
+            <i class="bi bi-calendar2-check me-1"></i>Logout
+          </a>
+  {% else %}
+          <a class="btn btn-gold rounded-pill px-2" href="{% url 'login_view'%}">
+            <i class="bi bi-calendar2-check me-1"></i>Login
+          </a>
+  {% endif %}               
+        </div>
+      </div>
+    </nav>
